@@ -1,0 +1,16 @@
+1. return error number:
+./encrypt -k wrongpassword -d video.webm.enc video.webm.enc.dec
+
+2. clean tmp file when being interupted.
+open two terminals
+./encrypt -k 123456 -e video.webm video.webm.enc
+
+ls
+./QueueCtl -c
+ls
+
+3. overwite input file
+./encrypt -k 123456 -e smallFile.txt -o
+
+4. remove input file after finishing
+./encrypt -k 123456 -e smallFile.txt smallFile.txt.out -r
